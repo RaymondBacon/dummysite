@@ -3,6 +3,8 @@
     <head>
         <link rel="stylesheet" href="main.css">
         <link rel="icon" type="image/png" href="./image/LOGO.ico">
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
         <title>
             Dummy site
         </title>
@@ -35,7 +37,12 @@
                         <b><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model.</p></b>
                     </div>
                 </div>
-
+                <div class="fade">
+                    <div><img src="./image/deadpool.jpg"></div>
+                    <div><img src="./image/deadpool2.jpg"></div>
+                    <div><img src="./image/deadpool3.jpg"></div>
+                </div>
+				
                 <!--Footer-->
                <div class="footer">
                    <ul>
@@ -44,5 +51,22 @@
                        <li><a href="">Contact</a></li>
                    </ul>
                </div>
+               <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+               <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+               <script type="text/javascript" src="slick/slick.min.js"></script>
+           
+                           <script type="text/javascript">
+                               $(document).ready(function(){
+                                 $('.fade').slick({
+                                   autoplay: true,
+                                   dots: true,
+                                   infinite: true,
+                                   speed: 500,
+                                   fade: true,
+                                   cssEase: 'linear',
+                                   size: 80,
+                                 });
+                               });
+                             </script>
     </body>
 </html>
