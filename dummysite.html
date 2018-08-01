@@ -3,8 +3,6 @@
     <head>
         <link rel="stylesheet" href="main.css">
         <link rel="icon" type="image/png" href="./image/LOGO.ico">
-        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
         <title>
             Dummy site
         </title>
@@ -37,12 +35,58 @@
                         <b><p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model.</p></b>
                     </div>
                 </div>
-                <div class="fade">
-                    <div><img src="./image/deadpool.jpg"></div>
-                    <div><img src="./image/deadpool2.jpg"></div>
-                    <div><img src="./image/deadpool3.jpg"></div>
+
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="image/deadpool3.jpg" style="width:100%">
+                        <div class="text">Caption Text</div>
+                    </div>
+      
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="image/deadpool2.jpg" style="width:100%">
+                        <div class="text">Caption Two</div>
+                    </div>
+      
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="image/deadpool.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+      
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-				
+                <br>
+      
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+    
+                    <script>
+                       var slideIndex = 0;
+                        showSlides();
+    
+                        function showSlides() {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none"; 
+                            }
+                            slideIndex++;
+                            if (slideIndex > slides.length) {slideIndex = 1} 
+                            slides[slideIndex-1].style.display = "block"; 
+                            setTimeout(showSlides, 2000); // Change image every 2 seconds
+                        }
+                    </script>
                 <!--Footer-->
                <div class="footer">
                    <ul>
@@ -51,21 +95,5 @@
                        <li><a href="contact.html'">Contact</a></li>
                    </ul>
                </div>
-               <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-               <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-               <script type="text/javascript" src="slick/slick.min.js"></script>
-           
-                           <script type="text/javascript">
-                               $(document).ready(function(){
-                                 $('.fade').slick({
-                                   autoplay: true,
-                                   dots: true,
-                                   infinite: true,
-                                   speed: 500,
-                                   fade: true,
-                                   cssEase: 'linear',
-                                 });
-                               });
-                             </script>
     </body>
 </html>
